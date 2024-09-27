@@ -34,13 +34,14 @@ If you are running on Windows, add the full path to `php` and `composer` if requ
 5. Create `.env.local` file in the root folder of the project
 ```
 DATABASE_URL="mysql://rta_user:5!eKj1IncqOOGuvFHy@127.0.0.1:3306/react_test_app_backend_db?serverVersion=8.0.32&charset=utf8mb4"
-MAILER_DSN=sendgrid+smtp://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@default
+MAILER_DSN=sendgrid+smtp://{{ SG.MY_SECRET }}
 SIGNATURE_EXPIRATION_GAP=86400
 FRONTEND_BASE_URL=http://localhost:4422
 FRONTEND_CONFIRMATION_URI=/confirm_email
 AUTH_SIGNATURE_SECRET=5be009ddb870442cbed8caf2c489d5ba
 APP_MAIL_SENDER=dvavramenko@gmail.com
 ```
+Instead of `{{ SG.MY_SECRET }}` ask me for the secret or use your own )
 
 6. Save the following SQL commands into a file, say `init_backend_db.sql`
 ```sql
