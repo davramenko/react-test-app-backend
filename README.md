@@ -43,6 +43,7 @@ php bin/console doctrine:migrations:migrate
 php bin/console app:user:create <username>
 php bin/console app:admin:create <username>
 ```
+It's recommended to use a real email address as the username
 
 7. Start backend app
 
