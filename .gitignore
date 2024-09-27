@@ -1,4 +1,5 @@
 /.idea
+/serve.cmd
 
 ###> symfony/framework-bundle ###
 /.env.local
