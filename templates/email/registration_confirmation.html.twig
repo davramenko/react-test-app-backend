@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AuthController!{% endblock %}
+
+{% block stylesheets %}
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        padding: 2em 12em 2em 12em;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    footer {
+        margin-top: 5em;
+        bottom: 3em;
+    }
+
+    .message {
+        border: gray solid thin;
+        background-color: #faf7f1;
+    }
+
+    .like-button {
+        width: 80%;
+        height: 3em;
+        margin: 0 auto;
+        padding-top: 2em;
+        text-align: center;
+        background-color: #68a8f3;
+    }
+
+    .like-button a {
+        font-weight: bold;
+        text-decoration: none;
+        background-color: #EEEEEE;
+        color: #333333;
+        padding: 2px 6px 2px 6px;
+        border-top: 1px solid #CCCCCC;
+        border-right: 1px solid #333333;
+        border-bottom: 1px solid #333333;
+        border-left: 1px solid #CCCCCC;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Test Email</h1>
+        <div class="message">
+            <div style="padding-bottom: 20px;">
+                Congrats {{ user.getFullName() }}! You started the registration at React Test Application. To complete registration click the following button. You will be redirected to our website. So we could know the email address you provided is real.
+            </div>
+            <div class="like-button">
+                <a href="{{ url }}" target="_blank">Complete registration</a>
+            </div>
+            <div style="margin-top: 20px;">
+                <p>If the button above doesn't work, please copy the link below and paste it into the browser address field to complete the registration.</p>
+                <p>{{ url }}</p>
+            </div>
+        </div>
+        <footer>
+            &copy;Company name
+        </footer>
+    </div>
+{% endblock %}
